@@ -25,5 +25,13 @@
     "dotenv": "^2.0.0",
     "mocha": "^5.2.0",
     "supertest": "^3.3.0"
+  },
+  "engines": {
+    "node": "10.9.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "knex": "knex",
+    "heroku-postbuild": "knex migrate:rollback; knex migrate:latest; knex seed:run;",
   }
 }
